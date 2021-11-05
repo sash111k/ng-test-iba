@@ -1,0 +1,20 @@
+<div class="tabs">
+   <div class="container">
+      <div class="tabs_container">
+         <button [class.tab-active]="id === 'fixtures' " class="tab tab-1"
+            (click)="tabChange('fixtures')">Fixtures</button>
+         <button [class.tab-active]="id === 'results' " class="tab tab-2"
+            (click)="tabChange('results')">Results</button>
+         <button [class.tab-active]="id === 'table' " class="tab tab-3" 
+            (click)="tabChange('table')">Table</button>
+         <button [class.tab-active]="id === 'stats' " class="tab tab-4" 
+            (click)="tabChange('stats')">Stats</button>
+      </div>
+      <div class="content_container">
+         <div *ngIf="id === 'fixtures'" class="content content-1">FIXTURES</div>
+         <div *ngIf="id === 'results'" class="content content-2"><results [sorting] = 'sorting'></results></div>
+         <div *ngIf="id === 'table'" class="content content-3">TABLE</div>
+         <div *ngIf="id === 'stats'" class="content content-4">STATS</div>
+      </div>
+   </div>
+</div>

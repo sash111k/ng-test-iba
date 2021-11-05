@@ -1,0 +1,52 @@
+.tabs{
+   transform: translateY(-77px);
+   position: relative;
+   z-index: 102;
+   
+}
+
+.tabs_container{
+   display: flex;
+   justify-content: center;
+   
+}
+
+.tab{
+   background-color: white;
+   font-weight: 700;
+   font-size: 24px;
+   padding: 55px;
+   border: 1px solid #eee;
+   border-top: 0;
+   cursor: pointer;
+}
+
+.tab:hover{
+   color: #eee
+}
+
+.tab.tab-active{
+   color: #d0021b;
+   border-bottom: 3px solid #d0021b;
+}
+
+.content_container{
+   margin-top: 70px;
+}
+
+.content{
+   display: block;
+   min-width: 80%;
+   border: 1px solid black;
+}
+
+.content-2{
+   border: 0;
+}
+
+.content-1,
+.content-3,
+.content-4{
+   text-align: center;
+   font-size: 50px;
+}

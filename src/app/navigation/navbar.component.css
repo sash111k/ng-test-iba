@@ -1,0 +1,32 @@
+.container__navbar{
+   max-width: 1100px;
+   margin: 0 auto;
+   padding: 15px 0;
+}
+
+.header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-weight: 700;
+}
+.header_logo{
+   width: 50px;
+   cursor: pointer;
+}
+
+.header_navbar{
+   font-size: 15px;
+   
+}
+
+.nav_link{
+   text-decoration: unset;
+   color: black;
+   margin-right: 50px;
+   font-weight: 700;
+}
+
+.nav_link.active{
+   color: red;
+}

@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  margin: 0;
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 1200px;
+}
+@media (max-width:1400px) {
+  
+  .container{
+    max-width: 960px;
+  }
+}
+
+img{
+   width: 100%;
+   display: block;
+}
+
+@import "~@ng-select/ng-select/themes/default.theme.css";
+/* @import "~@ng-select/ng-select/themes/material.theme.css"; */
