@@ -6,7 +6,7 @@
 }
 
 
-.ng-select.custom ::ng-deep .ng-select-container  { 
+.ng-select.custom ::ng-deep .ng-select-container  {
    width: 180px;
    border-radius: 0;
    border: none;
@@ -16,7 +16,7 @@
 }
 
 
-.ng-select.custom ::ng-deep .ng-option  { 
+.ng-select.custom ::ng-deep .ng-option  {
    width: 200px;
    display: flex;
    background-color: #303030;
@@ -44,7 +44,7 @@
    width: 12px;
    margin-top: 4px;
    color: #999;
-   background: url(../../assets/images/down-arrow-svgrepo-com.svg);
+   background: url(src/assets/images/down-arrow-svgrepo-com.svg);
 }
 
 ::ng-deep.ng-select .ng-has-value .ng-arrow-wrapper{

@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { MatchItem } from "./match.model";
+import { MatchItem } from "../../../../models/match.model";
 @Component({
    selector: 'match',
    templateUrl: './match.component.html',

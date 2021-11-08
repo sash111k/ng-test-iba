@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, OnInit } from "@angular/core";
-import { MatchesService } from "../matches.service";
+import { MatchesService } from "../../../services/matches.service";
 
 @Component({
    selector: 'results',
@@ -16,7 +16,7 @@ export class ResultsComponent implements OnChanges{
    sortTeam = 'all'
    sortTournament = 'all'
    sortSeason = 'all'
-   
+
 
    ngOnChanges() {
       console.log(this.sorting)

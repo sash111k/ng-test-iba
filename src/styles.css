@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: Roboto;
+  src: url("assets/fonts/Roboto-Regular.ttf");
+}
+
 *,
 *::before,
 *::after {
@@ -16,12 +22,13 @@ li {
   margin: 0;
 }
 
+
 .container{
   margin: 0 auto;
   max-width: 1200px;
 }
 @media (max-width:1400px) {
-  
+
   .container{
     max-width: 960px;
   }

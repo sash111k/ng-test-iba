@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
-import { DropdownItem } from "./dropdown.model";
+import { DropdownItem } from "../models/dropdown.model";
 @Injectable()
 
 export class DropdownService{
-   
+
 
    getTeams() : DropdownItem[] {
       return TEAMS;

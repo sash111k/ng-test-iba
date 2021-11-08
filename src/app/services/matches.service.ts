@@ -1,9 +1,9 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
 @Injectable()
 
 export class MatchesService{
-   getMatches() {
+   getMatches(): any{
       return MATCHES;
    }
 }
@@ -51,4 +51,4 @@ const MATCHES = [
       secondTeam: 'PSG.LGD',
       secondTeamScore: 2
    }
-]
+];
