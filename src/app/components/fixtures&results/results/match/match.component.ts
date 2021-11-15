@@ -1,5 +1,4 @@
-import { Component, Input } from "@angular/core";
-import { MatchItem } from "../../../../models/match.model";
+import { Component, Input } from '@angular/core';
 @Component({
    selector: 'match',
    templateUrl: './match.component.html',
@@ -7,11 +6,11 @@ import { MatchItem } from "../../../../models/match.model";
 })
 
 export class MatchComponent{
-   @Input() match: MatchItem = {
+   @Input() match: any = {
       id: 1,
       firstTeam: 'Team Spirit',
       firstTeamScore: 3,
       secondTeam: 'PSG.LGD',
       secondTeamScore: 2
-   }
+   };
 }

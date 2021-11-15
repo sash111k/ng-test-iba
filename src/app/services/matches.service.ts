@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
+import {HttpService} from './http.service';
 
 @Injectable()
 
 export class MatchesService{
+  constructor(private http : HttpService) {
+  }
    getMatches(): any{
-      return MATCHES;
+    this.http.get('/api/matches').subscribe((response) => {
+      console.log(response);
+    });
+    return MATCHES;
    }
 }
 

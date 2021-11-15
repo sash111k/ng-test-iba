@@ -2,6 +2,9 @@ export interface MatchItem{
    id: number;
    firstTeam: string;
    firstTeamScore: number;
-   secondTeam: string;
    secondTeamScore: number;
+   secondTeam: string;
+   tournament: string;
+   season: number;
+   fullTournamentName?: string;
 }

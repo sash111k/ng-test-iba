@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { HttpClientModule} from '@angular/common/http';
+
 
 import { AppComponent } from '../components/app.component';
 import { FixturesAndResultsComponent } from '../components/fixtures&results/fixtures-results.component';
@@ -14,6 +16,7 @@ import { DropdownComponent } from '../components/shared/dropdown.component';
 import { DropdownService } from '../services/dropdown.service';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from '../components/routes';
+import {HttpService} from '../services/http.service';
 
 @NgModule({
   declarations: [
@@ -29,11 +32,13 @@ import {appRoutes} from '../components/routes';
     BrowserModule,
     NgSelectModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [
     DropdownService,
-    MatchesService
+    MatchesService,
+    HttpService
   ],
   bootstrap: [AppComponent]
 })

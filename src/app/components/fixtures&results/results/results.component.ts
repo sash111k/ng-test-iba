@@ -1,5 +1,5 @@
-import { Component, Input, OnChanges, OnInit } from "@angular/core";
-import { MatchesService } from "../../../services/matches.service";
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { MatchesService } from '../../../services/matches.service';
 
 @Component({
    selector: 'results',
@@ -8,43 +8,42 @@ import { MatchesService } from "../../../services/matches.service";
 })
 
 export class ResultsComponent implements OnChanges{
-   @Input() sorting
+   @Input() sorting;
    constructor(private matchesService: MatchesService) { }
-   matches
+   matches;
 
 
-   sortTeam = 'all'
-   sortTournament = 'all'
-   sortSeason = 'all'
+   sortTeam = 'all';
+   sortTournament = 'all';
+   sortSeason = 'all';
 
-
-   ngOnChanges() {
-      console.log(this.sorting)
+   ngOnChanges(): void {
+      // console.log(this.sorting);
       if (this.sorting) {
          switch (this.sorting.sortBy) {
             case 'team':
                this.sortTeam = this.sorting.name;
                break;
             case 'tournament':
-               this.sortTournament = this.sorting.name
+               this.sortTournament = this.sorting.name;
                break;
             case 'season':
-               this.sortSeason = this.sorting.name
+               this.sortSeason = this.sorting.name;
                break;
          }
       }
-      console.log(this.sortTeam, this.sortTournament, this.sortSeason)
-      this.filterMatches()
+      console.log(this.sortTeam, this.sortTournament, this.sortSeason);
+      this.filterMatches();
    }
 
-   filterMatches() {
+   filterMatches(): void {
       this.matches = this.matchesService.getMatches().filter((match) => {
          if ((match.firstTeam.toLocaleLowerCase() === this.sortTeam.toLocaleLowerCase() ||
             match.secondTeam.toLocaleLowerCase() === this.sortTeam.toLocaleLowerCase() ||
             this.sortTeam.toLocaleLowerCase() === 'all')) {
-            return match
+            return match;
          }
-      })
+      });
    }
 
 }
