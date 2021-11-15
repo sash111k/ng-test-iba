@@ -25,7 +25,7 @@ const TEAMS: DropdownItem[] = [
    {id: 4, name: 'PSG.LGD'},
    {id: 5, name: 'Virtus Pro'},
    {id: 6, name: 'Team Nigma'},
-]
+];
 
 
 const TOURNAMENTS: DropdownItem[] = [
@@ -34,7 +34,7 @@ const TOURNAMENTS: DropdownItem[] = [
    { id: 3, name: 'DotaPit' },
    { id: 4, name: 'Major' },
    { id: 5, name: 'DPC League' }
-]
+];
 
 
 const SEASONS: DropdownItem[] = [
@@ -43,4 +43,4 @@ const SEASONS: DropdownItem[] = [
    { id: 3, name: '2018' },
    { id: 4, name: '2017' },
    { id: 5, name: '2016' },
-]
+];

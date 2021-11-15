@@ -3,7 +3,6 @@ import { DropdownItem } from '../../models/dropdown.model';
 import { DropdownService } from '../../services/dropdown.service';
 
 @Component({
-   selector: 'fixtures-results',
    templateUrl: './fixtures-results.component.html',
    styleUrls: ['./fixtures-results.component.css']
 })

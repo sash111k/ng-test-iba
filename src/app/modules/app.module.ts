@@ -12,6 +12,8 @@ import { ResultsComponent } from '../components/fixtures&results/results/results
 import { NavBarComponent } from '../components/navigation/navbar.component';
 import { DropdownComponent } from '../components/shared/dropdown.component';
 import { DropdownService } from '../services/dropdown.service';
+import {RouterModule} from '@angular/router';
+import {appRoutes} from '../components/routes';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { DropdownService } from '../services/dropdown.service';
     BrowserModule,
     NgSelectModule,
     FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     DropdownService,

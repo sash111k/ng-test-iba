@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input } from '@angular/core';
 
 @Component({
    selector: 'my-tabs',
@@ -8,9 +8,9 @@ import { Component, Input } from "@angular/core";
 
 
 export class MyTabsComponent{
-   @Input() sorting
-   id = 'results'
-   tabChange(ids) {
+   @Input() sorting;
+   id = 'results';
+   tabChange(ids): void {
       this.id = ids;
    }
 }
