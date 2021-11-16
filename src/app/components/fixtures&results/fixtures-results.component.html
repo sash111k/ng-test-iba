@@ -3,10 +3,13 @@
       <h1>FIXTURES & RESULTS</h1>
 
       <div class="select_cont">
-         <dropdown-select (selectedEmitter) = "getProperty($event)" class="dropdown_item" [items]="teams" myPL="Select Team"></dropdown-select>
-         <dropdown-select (selectedEmitter) = "getProperty($event)" class="dropdown_item" [items]="tournaments" myPL="Select Tournament"></dropdown-select>
-         <dropdown-select (selectedEmitter) = "getProperty($event)" class="dropdown_item" [items]="seasons" myPL="Select Season"></dropdown-select>
+         <dropdown-select (selectedEmitter) = "getProperty($event)" class="dropdown_item"
+                           [items]="teams" myPL="Select Team"></dropdown-select>
+         <dropdown-select (selectedEmitter) = "getProperty($event)" class="dropdown_item"
+                           [items]="tournaments" myPL="Select Tournament"></dropdown-select>
+         <dropdown-select (selectedEmitter) = "getProperty($event)" class="dropdown_item"
+                           [items]="seasons" myPL="Select Season"></dropdown-select>
       </div>
    </div>
 </div>
-<my-tabs [sorting] = 'sorting'></my-tabs>
+<my-tabs [matches] = 'matches'></my-tabs>

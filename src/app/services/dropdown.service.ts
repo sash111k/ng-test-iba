@@ -1,20 +1,25 @@
-import { Injectable } from "@angular/core";
-import { DropdownItem } from "../models/dropdown.model";
+import { Injectable } from '@angular/core';
+import { DropdownItem } from '../models/dropdown.model';
+import {HttpService} from './http.service';
+import {Observable} from 'rxjs';
 @Injectable()
 
 export class DropdownService{
 
+  constructor(private http: HttpService) {
+  }
 
-   getTeams() : DropdownItem[] {
-      return TEAMS;
+   // @ts-ignore
+  getTeams(): Observable<DropdownItem[]> {
+    return this.http.get('/api/teams');
    }
 
-   getTournaments(): DropdownItem[] {
-      return TOURNAMENTS;
+   getTournaments(): Observable<DropdownItem[]> {
+     return this.http.get('/api/tournaments');
    }
 
-   getSeasons(): DropdownItem[] {
-      return SEASONS;
+   getSeasons(): Observable<DropdownItem[]> {
+     return this.http.get('/api/seasons');
    }
 }
 

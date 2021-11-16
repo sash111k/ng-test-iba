@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 
 
 export class MyTabsComponent{
-   @Input() sorting;
+   @Input() matches;
    id = 'results';
    tabChange(ids): void {
       this.id = ids;

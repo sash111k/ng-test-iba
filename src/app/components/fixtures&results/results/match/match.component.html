@@ -1,9 +1,13 @@
-<div class="match_wrapper">
-   <div class="team first_team">{{match.firstTeam}}</div>
-   <div class="score_wrapper">
-      <div class="team_score first_team_score">{{match.firstTeamScore}}</div>
+<div class="wrapper">
+  <div *ngIf = '!match.full_tournament_name' class="tournament">{{match.tournament}} {{match.season}}</div>
+  <div *ngIf = 'match.full_tournament_name' class="tournament">{{match.full_tournament_name}}</div>
+  <div class="match_wrapper">
+    <div class="team first_team">{{match.first_team}}</div>
+    <div class="score_wrapper">
+      <div class="team_score first_team_score">{{match.first_team_score}}</div>
       <div style="margin: 0 10px;">-</div>
-      <div class="team_score second_team_score">{{match.secondTeamScore}}</div>
-   </div>
-   <div class="team second_team">{{match.secondTeam}}</div>
+      <div class="team_score second_team_score">{{match.second_team_score}}</div>
+    </div>
+    <div class="team second_team">{{match.second_team}}</div>
+  </div>
 </div>

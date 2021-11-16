@@ -1,10 +1,10 @@
 export interface MatchItem{
    id: number;
-   firstTeam: string;
-   firstTeamScore: number;
-   secondTeamScore: number;
-   secondTeam: string;
+   first_team: string;
+   first_team_score: number;
+   second_team_score: number;
+   second_team: string;
    tournament: string;
    season: number;
-   fullTournamentName?: string;
+   full_tournament_name?: string;
 }

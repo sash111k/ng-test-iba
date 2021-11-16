@@ -3,8 +3,8 @@ import {FixturesAndResultsComponent} from './fixtures&results/fixtures-results.c
 import {Routes} from '@angular/router';
 
 export const appRoutes: Routes = [
-  {path: 'results', component : FixturesAndResultsComponent },
-  {path: '', redirectTo: '/results', pathMatch: 'full'}
+  {path: 'results', component : FixturesAndResultsComponent }
+  // {path: '', redirectTo: '/results', pathMatch: 'full'}
 ];
 
 
