@@ -1,0 +1,58 @@
+<div class="container">
+  <h1>Create New Match</h1>
+  <hr>
+  <form class="form" [formGroup]="newMatchForm" (ngSubmit)="saveMatch(newMatchForm.value)" autocomplete="off" novalidate>
+    <div class="form-group">
+      <label>First Team:</label>
+      <em *ngIf="newMatchForm.controls.first_team_name.invalid
+                  && (newMatchForm.controls.first_team_name.touched || isDirty)">Required</em>
+      <ng-select class="custom" bindLabel="name" bindValue="id"
+                 [items]="first_team_items" placeholder="Select First Team"
+                 formControlName="first_team_name"></ng-select>
+    </div>
+    <div class="form-group">
+      <label>Second Team:</label>
+      <em *ngIf="newMatchForm.controls.second_team_name.invalid
+                  && (newMatchForm.controls.second_team_name.touched || isDirty)">Required</em>
+      <ng-select class="custom" bindLabel="name" bindValue="id"
+                      [items]="second_team_items" placeholder ="Select Second Team"
+                        formControlName="second_team_name"></ng-select>
+    </div>
+    <div class="form-group">
+      <label>First Team Score:</label>
+      <em *ngIf="newMatchForm.controls.first_team_score.invalid
+                  && (newMatchForm.controls.first_team_score.touched || isDirty)">Required</em>
+      <input formControlName="first_team_score" type="number" class="form-control"
+             placeholder="First Team Score..."/>
+    </div>
+    <div class="form-group">
+      <label>Second Team Score:</label>
+      <em *ngIf="newMatchForm.controls.second_team_score.invalid
+                  && (newMatchForm.controls.second_team_score.touched || isDirty)">Required</em>
+      <input formControlName="second_team_score" type="number" class="form-control"
+             placeholder="Second Team Score..."/>
+    </div>
+    <div class="form-group">
+      <label>Tournament:</label>
+      <em *ngIf="newMatchForm.controls.tournament.invalid
+                  && (newMatchForm.controls.tournament.touched || isDirty)">Required</em>
+      <ng-select class="custom" bindLabel="name" bindValue="id"
+                      [items]="tournament_items" placeholder="Select Tournament"
+                        formControlName="tournament"></ng-select>
+    </div>
+    <div class="form-group">
+      <label>Season: </label>
+      <em *ngIf="newMatchForm.controls.season.invalid
+                  && (newMatchForm.controls.season.touched || isDirty)">Required</em>
+      <ng-select class="custom" bindLabel="name" bindValue="id"
+                      [items]="season_items" placeholder="Select Season"
+                        formControlName="season"></ng-select>
+    </div>
+    <div class="form-group">
+      <label>Full Tournament Name:</label>
+      <input formControlName="full_tournament_name" type="text" class="form-control"
+             placeholder="Full Tournament Name..."/>
+    </div>
+    <button type="submit" class="btn">Save</button>
+  </form>
+</div>

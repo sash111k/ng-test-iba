@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { HttpClientModule} from '@angular/common/http';
@@ -17,6 +17,10 @@ import { DropdownService } from '../services/dropdown.service';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from '../components/routes';
 import {HttpService} from '../services/http.service';
+import {AdminAddMatchComponent} from '../components/admin/admin_add/add_match/admin.add.match.component';
+import {AdminService} from '../services/admin.service';
+import {AdminAddSeasonComponent} from '../components/admin/admin_add/add_season/admin.add.season.component';
+import {AdminAddTournamentComponent} from '../components/admin/admin_add/add_tournament/admin.add.tournament';
 
 @NgModule({
   declarations: [
@@ -26,19 +30,24 @@ import {HttpService} from '../services/http.service';
     DropdownComponent,
     MyTabsComponent,
     ResultsComponent,
-    MatchComponent
+    MatchComponent,
+    AdminAddMatchComponent,
+    AdminAddSeasonComponent,
+    AdminAddTournamentComponent
   ],
   imports: [
     BrowserModule,
     NgSelectModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule
   ],
   providers: [
     DropdownService,
     MatchesService,
-    HttpService
+    HttpService,
+    AdminService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,98 @@
+.form{
+  max-width: 250px;
+}
+
+.form-control{
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  border: #585A60 2px solid;
+  background-color: #303030;
+  color: #fff;
+}
+
+.btn{
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  background-color: #303030;
+  color: orange;
+}
+
+.form-group{
+  margin-bottom: 20px;
+}
+
+div > em {
+  float: right;
+  color : red;
+  font-weight: 700;
+}
+.error{
+  color: white;
+  background-color: rgba(255, 0, 0, 0.3)
+}
+
+
+
+/*FOR NG_SELECT*/
+.ng-select .ng-select-container{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(123, 8, 238) !important;
+}
+
+
+.ng-select.custom ::ng-deep .ng-select-container  {
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  padding: 10px 15px;;
+  background-color: #303030;
+  color: #fff;
+}
+
+
+.ng-select.custom ::ng-deep .ng-option  {
+  width: 100%;
+  display: flex;
+  background-color: #303030;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 10px 15px;
+}
+
+.ng-select.custom ::ng-deep .ng-select-container .ng-value-container .ng-placeholder {
+  color: #999;
+}
+
+.ng-select.custom ::ng-deep .ng-dropdown-panel .ng-dropdown-panel-items{
+  position: relative;
+  top: 3px;
+}
+
+::ng-deep.ng-select .ng-has-value .ng-placeholder {
+  display: none;
+}
+
+::ng-deep.ng-select .ng-arrow-wrapper{
+  display: block;
+  height: 12px;
+  width: 12px;
+  margin-top: 4px;
+  color: #999;
+  background: url(src/assets/images/down-arrow-svgrepo-com.svg);
+}
+
+::ng-deep.ng-select .ng-has-value .ng-arrow-wrapper{
+  display: none;
+}

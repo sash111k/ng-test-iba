@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Create New Match</h1>
+  <hr>
+  <form class="form" #tournamentForm='ngForm' (ngSubmit)="saveTournament(tournamentForm.value)" autocomplete="off" novalidate>
+    <div class="form-group">
+      <label>Tournament: </label>
+      <em *ngIf="tournamentForm.controls.tournament?.invalid &&
+       (tournamentForm.controls.tournament?.touched || isDirty)">Required</em>
+      <input (ngModel)="tournament" name="tournament" type="text" class="form-control"
+             placeholder="Tournament..." required/>
+    </div>
+    <span (mouseenter)="isDirty=true" (mouseleave)="isDirty=false">
+      <button type="submit" [disabled]="tournamentForm.invalid" class="btn">Save</button>
+    </span>
+  </form>
+</div>

@@ -21,8 +21,8 @@ export class FixturesAndResultsComponent implements OnInit{
    sorting: any;
 
    filterTeam = 0;
-   filterTournament = 0;
-   filterSeason = 0;
+   filterTournament = undefined;
+   filterSeason = undefined;
 
    ngOnInit(): void{
      this.activatedRoute.queryParams.subscribe(params => {
@@ -61,6 +61,15 @@ export class FixturesAndResultsComponent implements OnInit{
            this.filterSeason = this.sorting.id;
            break;
        }
+     }
+     if (this.filterTeam === 0) {
+       this.filterTeam = undefined;
+     }
+     if (this.filterTournament === 0) {
+       this.filterTournament = undefined;
+     }
+     if (this.filterSeason === 0) {
+       this.filterSeason = undefined;
      }
      console.log(this.filterTeam, this.filterTournament, this.filterSeason, 'FROM MAIN PAGE');
      this.router.navigate(

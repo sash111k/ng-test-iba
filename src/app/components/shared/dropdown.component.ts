@@ -1,33 +1,21 @@
-// @ts-ignore
-import {ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 import { DropdownItem } from '../../models/dropdown.model';
-import {ActivatedRoute, Router} from '@angular/router';
-import {HttpParams} from '@angular/common/http';
 
 @Component({
-  // tslint:disable-next-line:component-selector
    selector: 'dropdown-select',
    templateUrl: './dropdown.component.html',
    styleUrls: ['./dropdown.component.css']
 })
 
 
-export class DropdownComponent implements OnInit{
+export class DropdownComponent{
    @Input() items: DropdownItem[];
    @Input() myPL: string;
    @Output() selectedEmitter = new EventEmitter();
    selectedValue: number;
-   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+   constructor() {
    }
 
-
-   ngOnInit(): void{
-     // this.activatedRoute.queryParams.subscribe(params => {
-     //   this.selectedValue = params[this.myPL.slice(this.myPL.indexOf(' ') + 1).toLocaleLowerCase()]
-     //   console.log(this.selectedValue);
-     //   this._cd.detectChanges();
-     // });
-   }
 
   // tslint:disable-next-line:typedef
    onChange(event) {

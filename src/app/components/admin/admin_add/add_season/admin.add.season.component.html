@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Create New Match</h1>
+  <hr>
+  <form class="form" #seasonForm='ngForm' (ngSubmit)="saveSeason(seasonForm.value)" autocomplete="off" novalidate>
+    <div class="form-group">
+      <label>Season: </label>
+      <em *ngIf="seasonForm.controls.season?.invalid && (seasonForm.controls.season?.touched || isDirty)">Required</em>
+      <input (ngModel)="season" name="season" type="number" class="form-control"
+             placeholder="Season..." required/>
+    </div>
+    <span (mouseenter)="isDirty=true" (mouseleave)="isDirty=false">
+      <button type="submit" [disabled]="seasonForm.invalid" class="btn">Save</button>
+    </span>
+  </form>
+</div>

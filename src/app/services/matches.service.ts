@@ -12,6 +12,9 @@ export class MatchesService{
   }
    getMatches(sortTeam, sortTournament, sortSeason): Observable<MatchItem[]>{
     const URL = '/api/matches';
+    if (sortTeam === undefined) { sortTeam = 0; }
+    if (sortTournament === undefined) { sortTournament = 0; }
+    if (sortSeason === undefined) { sortSeason = 0; }
     let queryParams = new HttpParams().set('team', sortTeam);
     queryParams = queryParams.append('tournament', sortTournament);
     queryParams = queryParams.append('season', sortSeason);
