@@ -36,8 +36,5 @@ export class DropdownComponent implements OnInit{
      this.selectedEmitter.emit(event);
 
    }
-   onClear(event: any): void  {
-      console.log('clear');
-   }
 }
 
