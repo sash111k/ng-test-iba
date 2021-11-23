@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { DropdownItem } from '../../models/dropdown.model';
 
 @Component({
@@ -8,30 +8,33 @@ import { DropdownItem } from '../../models/dropdown.model';
 })
 
 
-export class DropdownComponent{
+export class DropdownComponent implements OnInit{
    @Input() items: DropdownItem[];
-   @Input() myPL: string;
+   @Input() title: string
    @Output() selectedEmitter = new EventEmitter();
    selectedValue: number;
+   myPlaceholder: string
    constructor() {
    }
 
+   ngOnInit() {
+     this.myPlaceholder = 'Select ' + this.title;
+   }
 
   // tslint:disable-next-line:typedef
    onChange(event) {
      if (event) {
-         event.sortBy = this.myPL.slice(this.myPL.indexOf(' ') + 1).toLocaleLowerCase();
+         event.sortBy = this.title.toLocaleLowerCase();
       }
       else {
          event = {
             id: 0,
             name: 'all',
-            sortBy: this.myPL.slice(this.myPL.indexOf(' ') + 1).toLocaleLowerCase()
+            sortBy: this.title.toLocaleLowerCase()
          };
       }
      this.selectedEmitter.emit(event);
-     console.log(event, 'from aaaaa');
-     console.log(this.selectedValue);
+
    }
    onClear(event: any): void  {
       console.log('clear');

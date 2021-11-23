@@ -17,6 +17,7 @@ export class AdminAddTournamentComponent{
     console.log(tournament);
     this.adminService.saveTournament(tournament).subscribe(()=>{
       alert('Success')
+
     })
   }
 }

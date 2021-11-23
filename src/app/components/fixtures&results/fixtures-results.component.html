@@ -4,11 +4,11 @@
 
       <div class="select_cont">
          <dropdown-select (selectedEmitter) = "getProperty($event)" class="dropdown_item"
-                           [items]="teams" myPL="Select Team"></dropdown-select>
+                           [items]="teams" title="Team"></dropdown-select>
          <dropdown-select (selectedEmitter) = "getProperty($event)" class="dropdown_item"
-                           [items]="tournaments" myPL="Select Tournament"></dropdown-select>
+                           [items]="tournaments" title="Tournament"></dropdown-select>
          <dropdown-select (selectedEmitter) = "getProperty($event)" class="dropdown_item"
-                           [items]="seasons" myPL="Select Season"></dropdown-select>
+                           [items]="seasons" title="Season"></dropdown-select>
       </div>
    </div>
 </div>
