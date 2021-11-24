@@ -21,6 +21,9 @@ import {AdminAddMatchComponent} from '../components/admin/admin_add/add_match/ad
 import {AdminService} from '../services/admin.service';
 import {AdminAddSeasonComponent} from '../components/admin/admin_add/add_season/admin.add.season.component';
 import {AdminAddTournamentComponent} from '../components/admin/admin_add/add_tournament/admin.add.tournament';
+import {AdminViewMatchesComponent} from '../components/admin/admin_view/admin_view_matches/admin.view.matches.component';
+import {TableModule} from 'carbon-components-angular';
+import {PaginationModule} from 'carbon-components-angular';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import {AdminAddTournamentComponent} from '../components/admin/admin_add/add_tou
     MatchComponent,
     AdminAddMatchComponent,
     AdminAddSeasonComponent,
-    AdminAddTournamentComponent
+    AdminAddTournamentComponent,
+    AdminViewMatchesComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,9 @@ import {AdminAddTournamentComponent} from '../components/admin/admin_add/add_tou
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    TableModule,
+    PaginationModule
   ],
   providers: [
     DropdownService,

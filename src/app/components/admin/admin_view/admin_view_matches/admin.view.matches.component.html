@@ -1,0 +1,12 @@
+<ibm-table-container>
+  <ibm-table-header>
+    <h4 ibmTableHeaderTitle>{{title}}</h4>
+  </ibm-table-header>
+  <ibm-table [model]="matchesTableModel" [sortable]="false" [showSelectionColumn]="false"
+             [skeleton]="false">
+
+  </ibm-table>
+  <ibm-pagination [model]="allMatches"
+                  [showPageInput]="false" (selectPage)="selectPage($event)">
+  </ibm-pagination>
+</ibm-table-container>
